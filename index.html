@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Stick Gun Arena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-wrapper">
+
+        <header>
+            <div>
+                <h1>STICK GUN <span>ARENA</span></h1>
+                <p>STICK FIGURE COMBAT</p>
+            </div>
+            <div class="status">● ARENA ACTIVE</div>
+        </header>
+
+        <div class="hud">
+            <div class="stat">
+                <span>HEALTH</span>
+                <strong id="health">100</strong>
+            </div>
+
+            <div class="stat">
+                <span>KILLS</span>
+                <strong id="kills">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>ENEMIES</span>
+                <strong id="enemies">0</strong>
+            </div>
+        </div>
+
+        <div class="arena">
+
+            <canvas id="gameCanvas"
+                    width="1000"
+                    height="650"></canvas>
+
+            <!-- MOBILE CONTROLS -->
+
+            <div class="mobile-controls">
+
+                <div class="joystick-area" id="moveJoystick">
+                    <div class="joystick-knob" id="moveKnob"></div>
+                    <span>MOVE</span>
+                </div>
+
+                <div class="joystick-area aim-area" id="aimJoystick">
+                    <div class="joystick-knob" id="aimKnob"></div>
+                    <span>AIM + FIRE</span>
+                </div>
+
+            </div>
+
+            <!-- START / GAME OVER SCREEN -->
+
+            <div id="gameOverlay" class="overlay">
+                <h2 id="overlayTitle">READY?</h2>
+                <p id="overlayText">Enter the arena and survive.</p>
+                <button id="startButton">START GAME</button>
+            </div>
+
+        </div>
+
+        <div class="bottom-bar">
+            <div>W A S D <span>MOVE</span></div>
+            <div>MOUSE <span>AIM</span></div>
+            <div>LEFT CLICK <span>SHOOT</span></div>
+            <div>SPACE <span>RESTART</span></div>
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
